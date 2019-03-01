@@ -388,11 +388,11 @@ UTF-8 encoding of request data is needed, make sure that the
       URIEncoding="UTF-8" />
 
 The next step is to download the DHIS2 WAR file and place it into the
-webapps directory of Tomcat. You can download the DHIS2 version 2.23 WAR
-release like this (replace 2.23 with your preferred version if
+webapps directory of Tomcat. You can download the DHIS2 version 2.31.1 WAR
+release like this (replace 2.31.1 with your preferred version if
 necessary):
 
-    wget https://www.dhis2.org/download/releases/2.26/dhis.war
+    wget https://s3-eu-west-1.amazonaws.com/releases.dhis2.org/2.31/2.31.1/dhis.war
 
 Move the WAR file into the Tomcat webapps directory. We want to call the
 WAR file ROOT.war in order to make it available at localhost directly
@@ -413,7 +413,7 @@ script has been invoked as root.
     fi
     
     export CATALINA_BASE="/home/dhis/tomcat-dhis"
-    /usr/share/tomcat7/bin/startup.sh
+    /usr/share/tomcat8/bin/startup.sh
     echo "Tomcat started"
 
 ### Running DHIS2
